@@ -1,0 +1,42 @@
+{
+  "name": "DevOps Toolset",
+  
+  // Uses the clean, lightweight Ubuntu base image instead of the bloated universal one
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
+
+  "features": {
+    // 1. Installs Terraform seamlessly
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "latest"
+    },
+    // 2. Installs AWS CLI (v2) for syncing files to S3
+    "ghcr.io/devcontainers/features/aws-cli:1": {
+      "version": "latest"
+    },
+    // 3. Installs Python 3 and pip for writing your Lambda backend counter
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "latest"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // Auto-formats your .tf files beautifully every time you save
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "terraform.languageServer.enable": true
+      },
+      "extensions": [
+        // Terraform autocomplete, validation, and syntax highlighting
+        "hashicorp.terraform",
+        // Python autocomplete, linting, and debugging for Lambda code
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+
+  // Prints the installed versions in the terminal to verify success upon startup
+  "postCreateCommand": "echo '=== Verification ===' && terraform --version && aws --version && python3 --version && pip3 --version"
+}
