@@ -1,0 +1,472 @@
+/* Modern Reset and CSS Custom Variables */
+:root {
+  --primary-color: #2563eb;       /* Sleek Dev Blue */
+  --primary-hover: #1d4ed8;
+  --bg-color: #ffffff;
+  --bg-alt: #f8fafc;              /* Very light slate */
+  --text-color: #1e293b;          /* Charcoal text */
+  --text-muted: #64748b;          /* Subtle gray */
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --accent-color: #3b82f6;
+  --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+  --primary-color: #60a5fa;       /* Brightened Cloud Blue */
+  --primary-hover: #93c5fd;
+  --bg-color: #0f172a;            /* Deep Space Dark */
+  --bg-alt: #1e293b;              /* Dark Slate */
+  --text-color: #f8fafc;          /* Off-white */
+  --text-muted: #94a3b8;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --accent-color: #60a5fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 100;
+  transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color var(--transition-speed);
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+#theme-toggle:hover {
+  background-color: var(--bg-alt);
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  background-color: var(--bg-alt);
+  transition: background-color var(--transition-speed);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.hero-tagline {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  color: var(--text-muted);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color var(--transition-speed);
+}
+
+.social-links a:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+}
+
+.alt-bg {
+  background-color: var(--bg-alt);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* About Card */
+.about-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.about-card p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.skill-category {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.skill-category h3 {
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-category ul {
+  list-style: none;
+}
+
+.skill-category li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.skill-category li:last-child {
+  border-bottom: none;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-header h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: var(--bg-alt);
+  color: var(--primary-color);
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+
+.project-desc {
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.project-card ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.project-card li {
+  margin-bottom: 8px;
+}
+
+.project-link {
+  margin-top: auto;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color var(--transition-speed);
+}
+
+.project-link:hover {
+  color: var(--primary-hover);
+}
+
+/* Timeline */
+.education-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -30px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 2px solid var(--bg-color);
+}
+
+.timeline-content {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.date {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.timeline-content h3 {
+  margin: 5px 0;
+}
+
+.issuer {
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Simplifies layout for mobile devices */
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .section {
+    padding: 50px 0;
+  }
+}
+
+/* Soft Skills / Professional Attributes Grid */
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.soft-skill-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.soft-skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.soft-skill-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--bg-alt);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+  font-size: 1.5rem;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.soft-skill-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.soft-skill-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* --- Unified Card Micro-Interactions --- */
+
+/* 1. Register the smooth transitions on all card types */
+.about-card,
+.skill-category,
+.project-card,
+.timeline-content,
+.soft-skill-card {
+  transition: 
+    transform var(--transition-speed) ease, 
+    box-shadow var(--transition-speed) ease, 
+    background-color var(--transition-speed) ease, 
+    border-color var(--transition-speed) ease;
+}
+
+/* 2. Apply the hover elevation and shadow interaction uniformly */
+.about-card:hover,
+.skill-category:hover,
+.project-card:hover,
+.timeline-content:hover,
+.soft-skill-card:hover {
+  transform: translateY(-5px);
+  /* Uses a subtle shadow that looks premium on both light and dark modes */
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.12);
+}
+
+/* 3. Ensure the timeline marker behaves nicely when its card is hovered */
+.timeline-item:hover .timeline-marker {
+  background-color: var(--primary-hover);
+  transform: scale(1.2);
+}
+
+.timeline-marker {
+  transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}

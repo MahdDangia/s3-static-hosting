@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Cloud & DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome for clean modern icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Portfolio</a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-content">
+      <h1>Hi, I'm <span class="highlight">Mahd Ali</span></h1>
+      <p class="subtitle">Cloud & DevOps Engineer in Training</p>
+      <p class="hero-tagline">Building highly available, scalable, and automated infrastructure in the cloud.</p>
+      <div class="social-links">
+        <a href="https://github.com/MahdDangia" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/mahd-ali-40a5ba24a/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:smahadali6@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-card">
+        <p>
+          I am a driven tech enthusiast specializing in Cloud Infrastructure and DevOps practices. 
+          My passion lies in automating workflows, deploying Infrastructure as Code (IaC), and building 
+          efficient pipelines that bridge the gap between development and operations.
+        </p>
+        <p>
+          Currently, I am focused on mastering AWS services, understanding containerization, and learning 
+          how to write clean declarative configurations using Terraform. When I'm not configuring cloud services, 
+          I love exploring mechanical restoration projects and learning about systems from the ground up.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section id="skills" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
+          <ul>
+            <li>AWS (S3, EC2, CloudFront, IAM)</li>
+            <li>Infrastructure as Code (Terraform, Pulumi)</li>
+            <li>GitHub Actions</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-code-branch"></i> Tools & Version Control</h3>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>Linux / Bash Scripting</li>
+            <li>VS Code & GitHub Codespaces</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-laptop-code"></i> Development & Design</h3>
+          <ul>
+            <li>HTML5 / CSS3 / Front-End Development</li>
+            <li>Video Editing & Media Asset Optimization</li>
+            <li>Static Site Generation</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Soft Skills / Professional Attributes Section -->
+  <section id="soft-skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Professional Attributes</h2>
+      <div class="soft-skills-grid">
+
+        <!-- Skill 1 -->
+        <div class="soft-skill-card">
+          <div class="soft-skill-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Effective Communication</h3>
+          <p>Articulating complex technical concepts clearly to both technical and non-technical stakeholders, fostering collaborative team alignments.</p>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="soft-skill-card">
+          <div class="soft-skill-icon">
+            <i class="fas fa-gauge-high"></i>
+          </div>
+          <h3>Thriving Under Pressure</h3>
+          <p>Maintaining composure and analytical focus during system critical incidents, prioritizing tasks effectively to meet demanding project deadlines.</p>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="soft-skill-card">
+          <div class="soft-skill-icon">
+            <i class="fas fa-arrows-spin"></i>
+          </div>
+          <h3>Adaptability & Learning</h3>
+          <p>Quickly pivoting to master new cloud technologies, tools, and methodologies in fast-paced, evolving development environments.</p>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="soft-skill-card">
+          <div class="soft-skill-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Collaborative Teamwork</h3>
+          <p>Working seamlessly in cross-functional structures, contributing constructively to group objectives, and sharing technical knowledge openly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+     <div class="projects-grid">
+
+        <!-- Project 1: Resume Website (Keep this as your Cloud/DevOps anchor) -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Terraform AWS Resume Website</h3>
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">AWS S3</span>
+          </div>
+          <p class="project-desc">
+            An automated static portfolio site provisioned entirely via declarative code and hosted on AWS S3.
+          </p>
+          <ul>
+            <li>Designed and executed a modular IaC architecture using Terraform.</li>
+            <li>Configured secure bucket policies to host public static assets.</li>
+            <li>Deployed using command-line AWS sync tools.</li>
+          </ul>
+          <!-- <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a> -->
+        </div>
+
+        <!-- New Project 2: Weather App -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Dynamic Weather Application</h3>
+            <span class="tech-tag">JavaScript ES6</span>
+            <span class="tech-tag">REST APIs</span>
+            <span class="tech-tag">CSS Grid</span>
+          </div>
+          <p class="project-desc">
+            A real-time weather tracking application that queries live meteorological data based on user input.
+          </p>
+          <ul>
+            <li>Integrated third-party Weather APIs utilizing asynchronous JavaScript (`fetch` / `async-await`).</li>
+            <li>Built a dynamic UI that updates colors and background images matching the current local weather.</li>
+            <li>Designed for mobile-first screens using flexible CSS Flexbox and Grid components.</li>
+          </ul>
+          <!-- <a href="#" class="project-link">View Live App <i class="fas fa-arrow-right"></i></a> -->
+        </div>
+
+        <!-- New Project 3: Interactive To-Do List -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Interactive Task Manager</h3>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Local Storage</span>
+            <span class="tech-tag">DOM Manipulation</span>
+          </div>
+          <p class="project-desc">
+            A responsive tasks application featuring state persistence, filtering, and smooth transitions.
+          </p>
+          <ul>
+            <li>Created dynamic DOM modification algorithms to add, toggle, filter, and delete tasks.</li>
+            <li>Polished user feedback loop with intuitive transition animations on state changes.</li>
+          </ul>
+          <!-- <a href="#" class="project-link">View Live App <i class="fas fa-arrow-right"></i></a> -->
+        </div>
+
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Education Section -->
+  <section id="education" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Certifications & Education</h2>
+      <div class="education-timeline">
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="date">July 2026</span>
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p class="issuer">Amazon Web Services (AWS)</p>
+            <p>Validated fundamental knowledge of AWS cloud concepts, security, technology, and billing structures.</p>
+            <!-- <h6><a href="">view certificate</a></h6> -->
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="date">Ongoing</span>
+            <h3>Intermediate in Computer Science (ICS)</h3>
+            <p class="issuer">Punjab College</p>
+            <p>Developing foundational expertise in programming languages, computer systems, and core IT concepts.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Visitor Counter Section -->
+  <section class="counter-section">
+    <div class="container text-center" style="text-align: center; padding: 20px 0;">
+      <p style="font-size: 1.1rem; color: var(--text-muted);">
+        <i class="fas fa-eye" style="color: var(--primary-color); margin-right: 8px;"></i> 
+        Total Visitors: <strong id="visitor-count" class="highlight">Loading...</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Mahd Ali. Built with HTML, CSS, and Terraform.Hosted on AWS using S3 static website hosting.</p>
+    </div>
+  </footer>
+
+  <!-- Reactive Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const icon = toggleBtn.querySelector('i');
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateIcon(savedTheme);
+
+    toggleBtn.addEventListener('click', () => {
+      let currentTheme = document.documentElement.getAttribute('data-theme');
+      let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateIcon(newTheme);
+    });
+
+    function updateIcon(theme) {
+      if (theme === 'dark') {
+        icon.className = 'fas fa-sun';
+      } else {
+        icon.className = 'fas fa-moon';
+      }
+    }
+
+      // Fetch Visitor Count from AWS API Gateway
+    const counterElement = document.getElementById('visitor-count');
+    
+    // Once you deploy the backend in the next steps, you will replace this URL
+    const API_URL = "YOUR_API_GATEWAY_URL_HERE"; 
+
+    async function getVisitorCount() {
+      try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        counterElement.textContent = data.count;
+      } catch (error) {
+        console.error("Error fetching visitor count:", error);
+        counterElement.textContent = "Unavailable";
+      }
+    }
+
+    // Run on page load
+    if (API_URL !== "YOUR_API_GATEWAY_URL_HERE") {
+      getVisitorCount();
+    } else {
+      counterElement.textContent = "Demo Mode (API not set)";
+    }
+  </script>
+
+
+</body>
+</html>
