@@ -1,0 +1,11 @@
+# Ignore local Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Ignore the hidden Terraform working directory
+.terraform/
+.terraform.lock.hcl
+
+# Ignore system files
+.DS_Store
+Thumbs.db

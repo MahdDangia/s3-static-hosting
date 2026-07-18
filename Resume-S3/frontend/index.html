@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Cloud & DevOps Engineer</title>
+  <title>Mahd Ali | Cloud & DevOps Engineer</title>
   <link rel="stylesheet" href="style.css">
   <!-- FontAwesome for clean modern icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -294,7 +294,7 @@
 
     async function getVisitorCount() {
       try {
-        const response = await fetch(API_URL);
+        const response = await fetch("https://kcso84ex7i.execute-api.us-east-1.amazonaws.com");
         const data = await response.json();
         counterElement.textContent = data.count;
       } catch (error) {
@@ -303,8 +303,9 @@
       }
     }
 
+    
     // Run on page load
-    if (API_URL !== "YOUR_API_GATEWAY_URL_HERE") {
+    if (API_URL !== "https://kcso84ex7i.execute-api.us-east-1.amazonaws.com") {
       getVisitorCount();
     } else {
       counterElement.textContent = "Demo Mode (API not set)";
