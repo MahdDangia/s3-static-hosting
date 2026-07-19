@@ -26,4 +26,4 @@ jobs:
     # 3. Sync your frontend folder to your live S3 bucket
     - name: Deploy Frontend to S3
       run: |
-        aws s3 sync ./frontend s3://YOUR-S3-BUCKET-NAME --delete
+        aws s3 sync Resume-S3/frontend s3://my-resume-website-ee763240 --delete
